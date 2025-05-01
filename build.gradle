@@ -1,0 +1,30 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'com.hunuru.common'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.38'
+    implementation 'org.springframework.boot:spring-boot-starter-security:3.4.5'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server:3.4.5'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
