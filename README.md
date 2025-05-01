@@ -1,7 +1,7 @@
 # 🔐 Generic Common Security Library
 
 This library provides a centralized configuration 
-for JWT-based authentication and authorization across all microservices in a distributed system. 
+for JWT-based authorization across all microservices in a distributed system. 
 It enables **centralized authentication** (via Keycloak) and **decentralized authorization** 
 (role-based access control within each microservice).
 
